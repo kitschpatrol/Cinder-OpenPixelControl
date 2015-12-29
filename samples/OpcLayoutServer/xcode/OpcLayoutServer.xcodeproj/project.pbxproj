@@ -1,0 +1,509 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		006D720419952D00008149E2 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 006D720219952D00008149E2 /* AVFoundation.framework */; };
+		006D720519952D00008149E2 /* CoreMedia.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 006D720319952D00008149E2 /* CoreMedia.framework */; };
+		0091D8F90E81B9330029341E /* OpenGL.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0091D8F80E81B9330029341E /* OpenGL.framework */; };
+		00B784B30FF439BC000DE1D7 /* Accelerate.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 00B784AF0FF439BC000DE1D7 /* Accelerate.framework */; };
+		00B784B40FF439BC000DE1D7 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 00B784B00FF439BC000DE1D7 /* AudioToolbox.framework */; };
+		00B784B50FF439BC000DE1D7 /* AudioUnit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 00B784B10FF439BC000DE1D7 /* AudioUnit.framework */; };
+		00B784B60FF439BC000DE1D7 /* CoreAudio.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 00B784B20FF439BC000DE1D7 /* CoreAudio.framework */; };
+		00B9955A1B128DF400A5C623 /* IOKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 00B995581B128DF400A5C623 /* IOKit.framework */; };
+		00B9955B1B128DF400A5C623 /* IOSurface.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 00B995591B128DF400A5C623 /* IOSurface.framework */; };
+		5323E6B20EAFCA74003A9687 /* CoreVideo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5323E6B10EAFCA74003A9687 /* CoreVideo.framework */; };
+		8D11072F0486CEB800E47090 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1058C7A1FEA54F0111CA2CBB /* Cocoa.framework */; };
+		CE37B1AF929A40B5807EED2B /* OpcServer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 5F52A1CE21EB464089AEC6E7 /* OpcServer.cpp */; };
+		0C5747A79567409CB46A3B90 /* OpcClient.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 40AD55E8E05342D3940F53F6 /* OpcClient.cpp */; };
+		0FCCA04C0D4B469FB41438B5 /* OpcServer.h in Headers */ = {isa = PBXBuildFile; fileRef = BF42AB8AF9AF44249E84B709 /* OpcServer.h */; };
+		D16619BDA6C341AF82FE0D83 /* OpcConstants.h in Headers */ = {isa = PBXBuildFile; fileRef = 92C18F86CC5C40F79FA9229F /* OpcConstants.h */; };
+		B896047EEBD7498A8BAC9EFE /* OpcClient.h in Headers */ = {isa = PBXBuildFile; fileRef = B34A3D04D23E41CD94254A0A /* OpcClient.h */; };
+		487F1BDD18044E1EB998F5B5 /* WaitTimerEventHandlerInterface.h in Headers */ = {isa = PBXBuildFile; fileRef = F47D2210242D4B738A0F001F /* WaitTimerEventHandlerInterface.h */; };
+		D525AC97081241BB91E36FD7 /* WaitTimer.h in Headers */ = {isa = PBXBuildFile; fileRef = D20B8607BF0E43ACACE00BF8 /* WaitTimer.h */; };
+		E6DE18B5B921468CA7E5A26A /* UdpSessionEventHandlerInterface.h in Headers */ = {isa = PBXBuildFile; fileRef = 1D195545837D46BEBC2B312F /* UdpSessionEventHandlerInterface.h */; };
+		0990CF09EF6F4709B16AC9D1 /* UdpSession.h in Headers */ = {isa = PBXBuildFile; fileRef = 222817EB40684549A0921201 /* UdpSession.h */; };
+		500CB9A899A540A68914B6E1 /* UdpServerEventHandlerInterface.h in Headers */ = {isa = PBXBuildFile; fileRef = 89E61F079AF44F7588685D28 /* UdpServerEventHandlerInterface.h */; };
+		0BC635906A5D4241BC67BC49 /* UdpServer.h in Headers */ = {isa = PBXBuildFile; fileRef = EA5DA789B84542DD92E0C5E2 /* UdpServer.h */; };
+		9B4DB9D893914138B6894450 /* UdpClientEventHandlerInterface.h in Headers */ = {isa = PBXBuildFile; fileRef = 6367BE0259DA4B198B4412DE /* UdpClientEventHandlerInterface.h */; };
+		DCA8F9B5D2BC4F65916355D0 /* UdpClient.h in Headers */ = {isa = PBXBuildFile; fileRef = A9EF4B75BE9B46F19B8C3A9E /* UdpClient.h */; };
+		D0A11E48841B4EE0B9C9B120 /* TcpSessionEventHandlerInterface.h in Headers */ = {isa = PBXBuildFile; fileRef = DA11C068338A4A39B800D320 /* TcpSessionEventHandlerInterface.h */; };
+		6CAEFDAC0C494FAC94B1AA30 /* TcpSession.h in Headers */ = {isa = PBXBuildFile; fileRef = A38B587BAB17429D96ACB601 /* TcpSession.h */; };
+		6A9E0D6FAF0949F4AFF550E8 /* TcpServerEventHandlerInterface.h in Headers */ = {isa = PBXBuildFile; fileRef = D98EDA9EF1164D4FA34EE14E /* TcpServerEventHandlerInterface.h */; };
+		25B15A26979D424D8318EEFD /* TcpServer.h in Headers */ = {isa = PBXBuildFile; fileRef = DD418FC59C284531BE583ACE /* TcpServer.h */; };
+		59881AF3D0B64BF9A5B04A5C /* TcpClientEventHandlerInterface.h in Headers */ = {isa = PBXBuildFile; fileRef = CFEA76F9DFB84C38A536E552 /* TcpClientEventHandlerInterface.h */; };
+		F56942DD77A2465AB848EE6C /* TcpClient.h in Headers */ = {isa = PBXBuildFile; fileRef = 1F12F517147242C1B5BAE486 /* TcpClient.h */; };
+		10BF7D6B80D2496EB7AF7952 /* SessionInterface.h in Headers */ = {isa = PBXBuildFile; fileRef = E3D8A9CA2B504D819F27C9E3 /* SessionInterface.h */; };
+		51C66F8238EA49DAB9C704B1 /* SessionEventHandlerInterface.h in Headers */ = {isa = PBXBuildFile; fileRef = F3789CD4457A4717BA99C84B /* SessionEventHandlerInterface.h */; };
+		896026628C9A4D47A2A2DB8D /* ServerInterface.h in Headers */ = {isa = PBXBuildFile; fileRef = E1718EDB9DC846CEACC1C4F9 /* ServerInterface.h */; };
+		697C91CA0A624296A02A35FF /* ServerEventHandlerInterface.h in Headers */ = {isa = PBXBuildFile; fileRef = 2BD096805201440BBDB73B4C /* ServerEventHandlerInterface.h */; };
+		C2370F065FCF466CB3506ACD /* DispatcherInterface.h in Headers */ = {isa = PBXBuildFile; fileRef = C6917BD588194E478DAB8250 /* DispatcherInterface.h */; };
+		E3AB7FEEFA814480982A23ED /* DispatcherEventHandlerInterface.h in Headers */ = {isa = PBXBuildFile; fileRef = 79A3B5F57E0F4B66ACD5C366 /* DispatcherEventHandlerInterface.h */; };
+		047D10A6D5734E1BB7DA6B56 /* ClientInterface.h in Headers */ = {isa = PBXBuildFile; fileRef = 4E55B73B0DC340E9923AC3B2 /* ClientInterface.h */; };
+		F180A20F971E43768768C582 /* ClientEventHandlerInterface.h in Headers */ = {isa = PBXBuildFile; fileRef = B3D7BA8842C54FA792A2D458 /* ClientEventHandlerInterface.h */; };
+		B5DE36133A9C4B84A7D07988 /* CinderAsio.h in Headers */ = {isa = PBXBuildFile; fileRef = A5732E31BB16438D8663E3A9 /* CinderAsio.h */; };
+		8C7575AA7CAE4E749C3B5D88 /* WaitTimer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = B7B3C23A5CBE4353B036F98E /* WaitTimer.cpp */; };
+		E6C1E7E2AD4547E4AA219ACB /* UdpSession.cpp in Sources */ = {isa = PBXBuildFile; fileRef = B37D859087244980977DCC68 /* UdpSession.cpp */; };
+		9CD9116400654B8589DFDBD0 /* UdpServer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 30BD30D0DB6249779A3BAC85 /* UdpServer.cpp */; };
+		7AA6E821F718479F8DAC5BC4 /* UdpClient.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 0241671DEFC2473B80329A27 /* UdpClient.cpp */; };
+		6ADE710BFF8D4D7AA3011795 /* TcpSession.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3E6FE1E49E294557BCA970E7 /* TcpSession.cpp */; };
+		AB6896054C974445899F8DCA /* TcpServer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 8BCE1ED34AA84D7699221247 /* TcpServer.cpp */; };
+		69F9E9BE97544AEC86F63CC1 /* TcpClient.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F467B23F788F4A7196BF8155 /* TcpClient.cpp */; };
+		50F7C50A60AC41268BF3B586 /* SessionInterface.cpp in Sources */ = {isa = PBXBuildFile; fileRef = EDD3C4D4FAE64F83A7C00ED5 /* SessionInterface.cpp */; };
+		06F323BE825A4EE88FED2BFF /* ServerInterface.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 940DBF223C4A419299292241 /* ServerInterface.cpp */; };
+		FD1C63BD9A0749129F040C29 /* DispatcherInterface.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 65D432C108D24EC2962A9E35 /* DispatcherInterface.cpp */; };
+		BC972C522B14446C94A6F00B /* ClientInterface.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 6CCA727AD528413FB98B34F2 /* ClientInterface.cpp */; };
+		9BFEE1C811A14A53B9955035 /* OpcLayoutServer_Prefix.pch in Headers */ = {isa = PBXBuildFile; fileRef = 6A651E1B7D08422387FC4451 /* OpcLayoutServer_Prefix.pch */; };
+		EA421D3EEB2C4D509E7F8738 /* CinderApp.icns in Resources */ = {isa = PBXBuildFile; fileRef = F2225BDED4634805903959D7 /* CinderApp.icns */; };
+		02FA5D75A64F47748FC99A95 /* Resources.h in Headers */ = {isa = PBXBuildFile; fileRef = 5743ACFA30AC4002A47C9FAD /* Resources.h */; };
+		B73BEEA46F34446D9BDB38B6 /* OpcLayoutServerApp.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 335418E8E19946F2BD94BC3B /* OpcLayoutServerApp.cpp */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		006D720219952D00008149E2 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
+		006D720319952D00008149E2 /* CoreMedia.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreMedia.framework; path = System/Library/Frameworks/CoreMedia.framework; sourceTree = SDKROOT; };
+		0091D8F80E81B9330029341E /* OpenGL.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGL.framework; path = /System/Library/Frameworks/OpenGL.framework; sourceTree = "<absolute>"; };
+		00B784AF0FF439BC000DE1D7 /* Accelerate.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Accelerate.framework; path = System/Library/Frameworks/Accelerate.framework; sourceTree = SDKROOT; };
+		00B784B00FF439BC000DE1D7 /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
+		00B784B10FF439BC000DE1D7 /* AudioUnit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioUnit.framework; path = System/Library/Frameworks/AudioUnit.framework; sourceTree = SDKROOT; };
+		00B784B20FF439BC000DE1D7 /* CoreAudio.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreAudio.framework; path = System/Library/Frameworks/CoreAudio.framework; sourceTree = SDKROOT; };
+		00B995581B128DF400A5C623 /* IOKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = IOKit.framework; path = System/Library/Frameworks/IOKit.framework; sourceTree = SDKROOT; };
+		00B995591B128DF400A5C623 /* IOSurface.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = IOSurface.framework; path = System/Library/Frameworks/IOSurface.framework; sourceTree = SDKROOT; };
+		1058C7A1FEA54F0111CA2CBB /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = /System/Library/Frameworks/Cocoa.framework; sourceTree = "<absolute>"; };
+		29B97324FDCFA39411CA2CEA /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = /System/Library/Frameworks/AppKit.framework; sourceTree = "<absolute>"; };
+		29B97325FDCFA39411CA2CEA /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = /System/Library/Frameworks/Foundation.framework; sourceTree = "<absolute>"; };
+		5323E6B10EAFCA74003A9687 /* CoreVideo.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreVideo.framework; path = /System/Library/Frameworks/CoreVideo.framework; sourceTree = "<absolute>"; };
+		8D1107320486CEB800E47090 /* OpcLayoutServer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = OpcLayoutServer.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		335418E8E19946F2BD94BC3B /* OpcLayoutServerApp.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.cpp; path = ../src/OpcLayoutServerApp.cpp; sourceTree = "<group>"; name = OpcLayoutServerApp.cpp; };
+		5743ACFA30AC4002A47C9FAD /* Resources.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ../include/Resources.h; sourceTree = "<group>"; name = Resources.h; };
+		F2225BDED4634805903959D7 /* CinderApp.icns */ = {isa = PBXFileReference; lastKnownFileType = image.icns; path = ../resources/CinderApp.icns; sourceTree = "<group>"; name = CinderApp.icns; };
+		37D6B791507D482A887E2C8C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; name = Info.plist; };
+		6A651E1B7D08422387FC4451 /* OpcLayoutServer_Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = "\"\""; path = OpcLayoutServer_Prefix.pch; sourceTree = "<group>"; name = OpcLayoutServer_Prefix.pch; };
+		6CCA727AD528413FB98B34F2 /* ClientInterface.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.cpp; path = ../../../../Asio/src/ClientInterface.cpp; sourceTree = "<group>"; name = ClientInterface.cpp; };
+		65D432C108D24EC2962A9E35 /* DispatcherInterface.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.cpp; path = ../../../../Asio/src/DispatcherInterface.cpp; sourceTree = "<group>"; name = DispatcherInterface.cpp; };
+		940DBF223C4A419299292241 /* ServerInterface.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.cpp; path = ../../../../Asio/src/ServerInterface.cpp; sourceTree = "<group>"; name = ServerInterface.cpp; };
+		EDD3C4D4FAE64F83A7C00ED5 /* SessionInterface.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.cpp; path = ../../../../Asio/src/SessionInterface.cpp; sourceTree = "<group>"; name = SessionInterface.cpp; };
+		F467B23F788F4A7196BF8155 /* TcpClient.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.cpp; path = ../../../../Asio/src/TcpClient.cpp; sourceTree = "<group>"; name = TcpClient.cpp; };
+		8BCE1ED34AA84D7699221247 /* TcpServer.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.cpp; path = ../../../../Asio/src/TcpServer.cpp; sourceTree = "<group>"; name = TcpServer.cpp; };
+		3E6FE1E49E294557BCA970E7 /* TcpSession.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.cpp; path = ../../../../Asio/src/TcpSession.cpp; sourceTree = "<group>"; name = TcpSession.cpp; };
+		0241671DEFC2473B80329A27 /* UdpClient.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.cpp; path = ../../../../Asio/src/UdpClient.cpp; sourceTree = "<group>"; name = UdpClient.cpp; };
+		30BD30D0DB6249779A3BAC85 /* UdpServer.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.cpp; path = ../../../../Asio/src/UdpServer.cpp; sourceTree = "<group>"; name = UdpServer.cpp; };
+		B37D859087244980977DCC68 /* UdpSession.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.cpp; path = ../../../../Asio/src/UdpSession.cpp; sourceTree = "<group>"; name = UdpSession.cpp; };
+		B7B3C23A5CBE4353B036F98E /* WaitTimer.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.cpp; path = ../../../../Asio/src/WaitTimer.cpp; sourceTree = "<group>"; name = WaitTimer.cpp; };
+		A5732E31BB16438D8663E3A9 /* CinderAsio.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ../../../../Asio/src/CinderAsio.h; sourceTree = "<group>"; name = CinderAsio.h; };
+		B3D7BA8842C54FA792A2D458 /* ClientEventHandlerInterface.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ../../../../Asio/src/ClientEventHandlerInterface.h; sourceTree = "<group>"; name = ClientEventHandlerInterface.h; };
+		4E55B73B0DC340E9923AC3B2 /* ClientInterface.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ../../../../Asio/src/ClientInterface.h; sourceTree = "<group>"; name = ClientInterface.h; };
+		79A3B5F57E0F4B66ACD5C366 /* DispatcherEventHandlerInterface.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ../../../../Asio/src/DispatcherEventHandlerInterface.h; sourceTree = "<group>"; name = DispatcherEventHandlerInterface.h; };
+		C6917BD588194E478DAB8250 /* DispatcherInterface.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ../../../../Asio/src/DispatcherInterface.h; sourceTree = "<group>"; name = DispatcherInterface.h; };
+		2BD096805201440BBDB73B4C /* ServerEventHandlerInterface.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ../../../../Asio/src/ServerEventHandlerInterface.h; sourceTree = "<group>"; name = ServerEventHandlerInterface.h; };
+		E1718EDB9DC846CEACC1C4F9 /* ServerInterface.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ../../../../Asio/src/ServerInterface.h; sourceTree = "<group>"; name = ServerInterface.h; };
+		F3789CD4457A4717BA99C84B /* SessionEventHandlerInterface.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ../../../../Asio/src/SessionEventHandlerInterface.h; sourceTree = "<group>"; name = SessionEventHandlerInterface.h; };
+		E3D8A9CA2B504D819F27C9E3 /* SessionInterface.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ../../../../Asio/src/SessionInterface.h; sourceTree = "<group>"; name = SessionInterface.h; };
+		1F12F517147242C1B5BAE486 /* TcpClient.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ../../../../Asio/src/TcpClient.h; sourceTree = "<group>"; name = TcpClient.h; };
+		CFEA76F9DFB84C38A536E552 /* TcpClientEventHandlerInterface.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ../../../../Asio/src/TcpClientEventHandlerInterface.h; sourceTree = "<group>"; name = TcpClientEventHandlerInterface.h; };
+		DD418FC59C284531BE583ACE /* TcpServer.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ../../../../Asio/src/TcpServer.h; sourceTree = "<group>"; name = TcpServer.h; };
+		D98EDA9EF1164D4FA34EE14E /* TcpServerEventHandlerInterface.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ../../../../Asio/src/TcpServerEventHandlerInterface.h; sourceTree = "<group>"; name = TcpServerEventHandlerInterface.h; };
+		A38B587BAB17429D96ACB601 /* TcpSession.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ../../../../Asio/src/TcpSession.h; sourceTree = "<group>"; name = TcpSession.h; };
+		DA11C068338A4A39B800D320 /* TcpSessionEventHandlerInterface.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ../../../../Asio/src/TcpSessionEventHandlerInterface.h; sourceTree = "<group>"; name = TcpSessionEventHandlerInterface.h; };
+		A9EF4B75BE9B46F19B8C3A9E /* UdpClient.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ../../../../Asio/src/UdpClient.h; sourceTree = "<group>"; name = UdpClient.h; };
+		6367BE0259DA4B198B4412DE /* UdpClientEventHandlerInterface.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ../../../../Asio/src/UdpClientEventHandlerInterface.h; sourceTree = "<group>"; name = UdpClientEventHandlerInterface.h; };
+		EA5DA789B84542DD92E0C5E2 /* UdpServer.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ../../../../Asio/src/UdpServer.h; sourceTree = "<group>"; name = UdpServer.h; };
+		89E61F079AF44F7588685D28 /* UdpServerEventHandlerInterface.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ../../../../Asio/src/UdpServerEventHandlerInterface.h; sourceTree = "<group>"; name = UdpServerEventHandlerInterface.h; };
+		222817EB40684549A0921201 /* UdpSession.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ../../../../Asio/src/UdpSession.h; sourceTree = "<group>"; name = UdpSession.h; };
+		1D195545837D46BEBC2B312F /* UdpSessionEventHandlerInterface.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ../../../../Asio/src/UdpSessionEventHandlerInterface.h; sourceTree = "<group>"; name = UdpSessionEventHandlerInterface.h; };
+		D20B8607BF0E43ACACE00BF8 /* WaitTimer.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ../../../../Asio/src/WaitTimer.h; sourceTree = "<group>"; name = WaitTimer.h; };
+		F47D2210242D4B738A0F001F /* WaitTimerEventHandlerInterface.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ../../../../Asio/src/WaitTimerEventHandlerInterface.h; sourceTree = "<group>"; name = WaitTimerEventHandlerInterface.h; };
+		B34A3D04D23E41CD94254A0A /* OpcClient.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ../../../src/OpcClient.h; sourceTree = "<group>"; name = OpcClient.h; };
+		92C18F86CC5C40F79FA9229F /* OpcConstants.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ../../../src/OpcConstants.h; sourceTree = "<group>"; name = OpcConstants.h; };
+		BF42AB8AF9AF44249E84B709 /* OpcServer.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ../../../src/OpcServer.h; sourceTree = "<group>"; name = OpcServer.h; };
+		40AD55E8E05342D3940F53F6 /* OpcClient.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.cpp; path = ../../../src/OpcClient.cpp; sourceTree = "<group>"; name = OpcClient.cpp; };
+		5F52A1CE21EB464089AEC6E7 /* OpcServer.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.cpp; path = ../../../src/OpcServer.cpp; sourceTree = "<group>"; name = OpcServer.cpp; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		8D11072E0486CEB800E47090 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				006D720419952D00008149E2 /* AVFoundation.framework in Frameworks */,
+				006D720519952D00008149E2 /* CoreMedia.framework in Frameworks */,
+				8D11072F0486CEB800E47090 /* Cocoa.framework in Frameworks */,
+				0091D8F90E81B9330029341E /* OpenGL.framework in Frameworks */,
+				5323E6B20EAFCA74003A9687 /* CoreVideo.framework in Frameworks */,
+				00B784B30FF439BC000DE1D7 /* Accelerate.framework in Frameworks */,
+				00B784B40FF439BC000DE1D7 /* AudioToolbox.framework in Frameworks */,
+				00B784B50FF439BC000DE1D7 /* AudioUnit.framework in Frameworks */,
+				00B784B60FF439BC000DE1D7 /* CoreAudio.framework in Frameworks */,
+				00B9955A1B128DF400A5C623 /* IOKit.framework in Frameworks */,
+				00B9955B1B128DF400A5C623 /* IOSurface.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		080E96DDFE201D6D7F000001 /* Source */ = {
+			isa = PBXGroup;
+			children = (
+				335418E8E19946F2BD94BC3B /* OpcLayoutServerApp.cpp */,
+			);
+			name = Source;
+			sourceTree = "<group>";
+		};
+		1058C7A0FEA54F0111CA2CBB /* Linked Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				006D720219952D00008149E2 /* AVFoundation.framework */,
+				006D720319952D00008149E2 /* CoreMedia.framework */,
+				00B784AF0FF439BC000DE1D7 /* Accelerate.framework */,
+				00B784B00FF439BC000DE1D7 /* AudioToolbox.framework */,
+				00B784B10FF439BC000DE1D7 /* AudioUnit.framework */,
+				00B784B20FF439BC000DE1D7 /* CoreAudio.framework */,
+				5323E6B10EAFCA74003A9687 /* CoreVideo.framework */,
+				0091D8F80E81B9330029341E /* OpenGL.framework */,
+				1058C7A1FEA54F0111CA2CBB /* Cocoa.framework */,
+				00B995581B128DF400A5C623 /* IOKit.framework */,
+				00B995591B128DF400A5C623 /* IOSurface.framework */,
+			);
+			name = "Linked Frameworks";
+			sourceTree = "<group>";
+		};
+		1058C7A2FEA54F0111CA2CBB /* Other Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				29B97324FDCFA39411CA2CEA /* AppKit.framework */,
+				29B97325FDCFA39411CA2CEA /* Foundation.framework */,
+			);
+			name = "Other Frameworks";
+			sourceTree = "<group>";
+		};
+		19C28FACFE9D520D11CA2CBB /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				8D1107320486CEB800E47090 /* OpcLayoutServer.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		29B97314FDCFA39411CA2CEA /* OpcLayoutServer */ = {
+			isa = PBXGroup;
+			children = (
+				01B97315FEAEA392516A2CEA /* Blocks */,
+				29B97315FDCFA39411CA2CEA /* Headers */,
+				080E96DDFE201D6D7F000001 /* Source */,
+				29B97317FDCFA39411CA2CEA /* Resources */,
+				29B97323FDCFA39411CA2CEA /* Frameworks */,
+				19C28FACFE9D520D11CA2CBB /* Products */,
+			);
+			name = OpcLayoutServer;
+			sourceTree = "<group>";
+		};
+		4536BA6E88764DF9BC8338F5 /* src */ = {
+			isa = PBXGroup;
+			children = (
+				6CCA727AD528413FB98B34F2 /* ClientInterface.cpp */,
+				65D432C108D24EC2962A9E35 /* DispatcherInterface.cpp */,
+				940DBF223C4A419299292241 /* ServerInterface.cpp */,
+				EDD3C4D4FAE64F83A7C00ED5 /* SessionInterface.cpp */,
+				F467B23F788F4A7196BF8155 /* TcpClient.cpp */,
+				8BCE1ED34AA84D7699221247 /* TcpServer.cpp */,
+				3E6FE1E49E294557BCA970E7 /* TcpSession.cpp */,
+				0241671DEFC2473B80329A27 /* UdpClient.cpp */,
+				30BD30D0DB6249779A3BAC85 /* UdpServer.cpp */,
+				B37D859087244980977DCC68 /* UdpSession.cpp */,
+				B7B3C23A5CBE4353B036F98E /* WaitTimer.cpp */,
+				A5732E31BB16438D8663E3A9 /* CinderAsio.h */,
+				B3D7BA8842C54FA792A2D458 /* ClientEventHandlerInterface.h */,
+				4E55B73B0DC340E9923AC3B2 /* ClientInterface.h */,
+				79A3B5F57E0F4B66ACD5C366 /* DispatcherEventHandlerInterface.h */,
+				C6917BD588194E478DAB8250 /* DispatcherInterface.h */,
+				2BD096805201440BBDB73B4C /* ServerEventHandlerInterface.h */,
+				E1718EDB9DC846CEACC1C4F9 /* ServerInterface.h */,
+				F3789CD4457A4717BA99C84B /* SessionEventHandlerInterface.h */,
+				E3D8A9CA2B504D819F27C9E3 /* SessionInterface.h */,
+				1F12F517147242C1B5BAE486 /* TcpClient.h */,
+				CFEA76F9DFB84C38A536E552 /* TcpClientEventHandlerInterface.h */,
+				DD418FC59C284531BE583ACE /* TcpServer.h */,
+				D98EDA9EF1164D4FA34EE14E /* TcpServerEventHandlerInterface.h */,
+				A38B587BAB17429D96ACB601 /* TcpSession.h */,
+				DA11C068338A4A39B800D320 /* TcpSessionEventHandlerInterface.h */,
+				A9EF4B75BE9B46F19B8C3A9E /* UdpClient.h */,
+				6367BE0259DA4B198B4412DE /* UdpClientEventHandlerInterface.h */,
+				EA5DA789B84542DD92E0C5E2 /* UdpServer.h */,
+				89E61F079AF44F7588685D28 /* UdpServerEventHandlerInterface.h */,
+				222817EB40684549A0921201 /* UdpSession.h */,
+				1D195545837D46BEBC2B312F /* UdpSessionEventHandlerInterface.h */,
+				D20B8607BF0E43ACACE00BF8 /* WaitTimer.h */,
+				F47D2210242D4B738A0F001F /* WaitTimerEventHandlerInterface.h */,
+			);
+			name = src;
+			sourceTree = "<group>";
+		};
+		FC8AFA275059496E8C60A8D2 /* Asio */ = {
+			isa = PBXGroup;
+			children = (
+				4536BA6E88764DF9BC8338F5 /* src */,
+			);
+			name = Asio;
+			sourceTree = "<group>";
+		};
+		EEC5FD9CE3804F50B97B5C24 /* src */ = {
+			isa = PBXGroup;
+			children = (
+				B34A3D04D23E41CD94254A0A /* OpcClient.h */,
+				92C18F86CC5C40F79FA9229F /* OpcConstants.h */,
+				BF42AB8AF9AF44249E84B709 /* OpcServer.h */,
+				40AD55E8E05342D3940F53F6 /* OpcClient.cpp */,
+				5F52A1CE21EB464089AEC6E7 /* OpcServer.cpp */,
+			);
+			name = src;
+			sourceTree = "<group>";
+		};
+		8B57B48DBF4142F9A3C2B20A /* OpenPixelControl */ = {
+			isa = PBXGroup;
+			children = (
+				EEC5FD9CE3804F50B97B5C24 /* src */,
+			);
+			name = OpenPixelControl;
+			sourceTree = "<group>";
+		};
+		01B97315FEAEA392516A2CEA /* Blocks */ = {
+			isa = PBXGroup;
+			children = (
+				FC8AFA275059496E8C60A8D2 /* Asio */,
+				8B57B48DBF4142F9A3C2B20A /* OpenPixelControl */,
+			);
+			name = Blocks;
+			sourceTree = "<group>";
+		};
+		29B97315FDCFA39411CA2CEA /* Headers */ = {
+			isa = PBXGroup;
+			children = (
+				5743ACFA30AC4002A47C9FAD /* Resources.h */,
+				6A651E1B7D08422387FC4451 /* OpcLayoutServer_Prefix.pch */,
+			);
+			name = Headers;
+			sourceTree = "<group>";
+		};
+		29B97317FDCFA39411CA2CEA /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				F2225BDED4634805903959D7 /* CinderApp.icns */,
+				37D6B791507D482A887E2C8C /* Info.plist */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
+		29B97323FDCFA39411CA2CEA /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				1058C7A0FEA54F0111CA2CBB /* Linked Frameworks */,
+				1058C7A2FEA54F0111CA2CBB /* Other Frameworks */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		8D1107260486CEB800E47090 /* OpcLayoutServer */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C01FCF4A08A954540054247B /* Build configuration list for PBXNativeTarget "OpcLayoutServer" */;
+			buildPhases = (
+				8D1107290486CEB800E47090 /* Resources */,
+				8D11072C0486CEB800E47090 /* Sources */,
+				8D11072E0486CEB800E47090 /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = OpcLayoutServer;
+			productInstallPath = "$(HOME)/Applications";
+			productName = OpcLayoutServer;
+			productReference = 8D1107320486CEB800E47090 /* OpcLayoutServer.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		29B97313FDCFA39411CA2CEA /* Project object */ = {
+			isa = PBXProject;
+			buildConfigurationList = C01FCF4E08A954540054247B /* Build configuration list for PBXProject "OpcLayoutServer" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 1;
+			knownRegions = (
+				English,
+				Japanese,
+				French,
+				German,
+			);
+			mainGroup = 29B97314FDCFA39411CA2CEA /* OpcLayoutServer */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				8D1107260486CEB800E47090 /* OpcLayoutServer */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		8D1107290486CEB800E47090 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EA421D3EEB2C4D509E7F8738 /* CinderApp.icns in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		8D11072C0486CEB800E47090 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B73BEEA46F34446D9BDB38B6 /* OpcLayoutServerApp.cpp in Sources */,
+				BC972C522B14446C94A6F00B /* ClientInterface.cpp in Sources */,
+				FD1C63BD9A0749129F040C29 /* DispatcherInterface.cpp in Sources */,
+				06F323BE825A4EE88FED2BFF /* ServerInterface.cpp in Sources */,
+				50F7C50A60AC41268BF3B586 /* SessionInterface.cpp in Sources */,
+				69F9E9BE97544AEC86F63CC1 /* TcpClient.cpp in Sources */,
+				AB6896054C974445899F8DCA /* TcpServer.cpp in Sources */,
+				6ADE710BFF8D4D7AA3011795 /* TcpSession.cpp in Sources */,
+				7AA6E821F718479F8DAC5BC4 /* UdpClient.cpp in Sources */,
+				9CD9116400654B8589DFDBD0 /* UdpServer.cpp in Sources */,
+				E6C1E7E2AD4547E4AA219ACB /* UdpSession.cpp in Sources */,
+				8C7575AA7CAE4E749C3B5D88 /* WaitTimer.cpp in Sources */,
+				0C5747A79567409CB46A3B90 /* OpcClient.cpp in Sources */,
+				CE37B1AF929A40B5807EED2B /* OpcServer.cpp in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		C01FCF4B08A954540054247B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				DEAD_CODE_STRIPPING = YES;
+				COPY_PHASE_STRIP = NO;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = OpcLayoutServer_Prefix.pch;
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				INFOPLIST_FILE = Info.plist;
+				INSTALL_PATH = "$(HOME)/Applications";
+				OTHER_LDFLAGS = "\"$(CINDER_PATH)/lib/libcinder_d.a\"";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.libcinder.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = OpcLayoutServer;
+				SYMROOT = ./build;
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		C01FCF4C08A954540054247B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				DEAD_CODE_STRIPPING = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				GCC_FAST_MATH = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = YES;
+				GCC_OPTIMIZATION_LEVEL = 3;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"NDEBUG=1",
+					"$(inherited)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = OpcLayoutServer_Prefix.pch;
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				INFOPLIST_FILE = Info.plist;
+				INSTALL_PATH = "$(HOME)/Applications";
+				OTHER_LDFLAGS = "\"$(CINDER_PATH)/lib/libcinder.a\"";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.libcinder.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = OpcLayoutServer;
+				STRIP_INSTALLED_PRODUCT = YES;
+				SYMROOT = ./build;
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+		C01FCF4F08A954540054247B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CINDER_PATH = "../../../../..";
+				CLANG_CXX_LANGUAGE_STANDARD = "c++11";
+				CLANG_CXX_LIBRARY = "libc++";
+				ENABLE_TESTABILITY = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				HEADER_SEARCH_PATHS = "\"$(CINDER_PATH)/include\"";
+				MACOSX_DEPLOYMENT_TARGET = 10.8;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+				USER_HEADER_SEARCH_PATHS = (
+					"\"$(CINDER_PATH)/include\" ../include",
+					../../../../Asio/src,
+				);
+			};
+			name = Debug;
+		};
+		C01FCF5008A954540054247B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CINDER_PATH = "../../../../..";
+				CLANG_CXX_LANGUAGE_STANDARD = "c++11";
+				CLANG_CXX_LIBRARY = "libc++";
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				HEADER_SEARCH_PATHS = "\"$(CINDER_PATH)/include\"";
+				MACOSX_DEPLOYMENT_TARGET = 10.8;
+				SDKROOT = macosx;
+				USER_HEADER_SEARCH_PATHS = (
+					"\"$(CINDER_PATH)/include\" ../include",
+					../../../../Asio/src,
+				);
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		C01FCF4A08A954540054247B /* Build configuration list for PBXNativeTarget "OpcLayoutServer" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C01FCF4B08A954540054247B /* Debug */,
+				C01FCF4C08A954540054247B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		C01FCF4E08A954540054247B /* Build configuration list for PBXProject "OpcLayoutServer" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C01FCF4F08A954540054247B /* Debug */,
+				C01FCF5008A954540054247B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 29B97313FDCFA39411CA2CEA /* Project object */;
+}

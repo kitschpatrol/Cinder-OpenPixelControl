@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<cinder>
+	<block
+	name="OpenPixelControl"
+	id="com.kitschpatrol.openpixelcontrol"
+	git="https://github.com/kitschpatrol/Cinder-OpenPixelControl.git"
+	url="https://github.com/kitschpatrol/Cinder-OpenPixelControl"
+	author="Eric Mika"
+	summary="Basic client and server implementing (most of) the OpenPixelControl protocol on top of Boost.Asio."
+	version="1.0.0"
+	library="http://openpixelcontrol.org"
+	license="MIT"
+	>
+		<requires>asio.bantherewind.com</requires>
+		<supports os="macosx" />
+		<supports os="msw" />	
+	
+		<headerPattern>src/*.h</headerPattern>
+		<sourcePattern>src/*.cpp</sourcePattern>
+		
+		<platform os="msw">
+			<includePath>src</includePath>
+		</platform>
+		
+	</block>
+</cinder>

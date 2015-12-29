@@ -1,0 +1,169 @@
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hpp;hxx;hm;inl;inc;xsd</Extensions>
+    </Filter>
+    <Filter Include="Resource Files">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav</Extensions>
+    </Filter>
+    <Filter Include="Blocks">
+      <UniqueIdentifier>{ABECEF63-C50E-4651-910A-0A184B3B7456}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Blocks\Asio">
+      <UniqueIdentifier>{5B490EB0-DF86-41F5-B8FF-B0C3DE2CDFE8}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Blocks\Asio\src">
+      <UniqueIdentifier>{B0F625A9-0300-4AA0-9D3B-ACD4AAD03072}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Blocks\OpenPixelControl">
+      <UniqueIdentifier>{5C359951-41DB-4C19-A3E6-4F6BD3695C4B}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Blocks\OpenPixelControl\src">
+      <UniqueIdentifier>{C130355D-D182-4980-82BA-B7082DDEC400}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="..\src\OpcBasicClientApp.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\OpcBasicClientApp.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClInclude Include="..\include\Resources.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClCompile Include="..\..\..\..\Asio\src\ClientInterface.cpp">
+      <Filter>Blocks\Asio\src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\Asio\src\DispatcherInterface.cpp">
+      <Filter>Blocks\Asio\src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\Asio\src\ServerInterface.cpp">
+      <Filter>Blocks\Asio\src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\Asio\src\SessionInterface.cpp">
+      <Filter>Blocks\Asio\src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\Asio\src\TcpClient.cpp">
+      <Filter>Blocks\Asio\src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\Asio\src\TcpServer.cpp">
+      <Filter>Blocks\Asio\src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\Asio\src\TcpSession.cpp">
+      <Filter>Blocks\Asio\src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\Asio\src\UdpClient.cpp">
+      <Filter>Blocks\Asio\src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\Asio\src\UdpServer.cpp">
+      <Filter>Blocks\Asio\src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\Asio\src\UdpSession.cpp">
+      <Filter>Blocks\Asio\src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\Asio\src\WaitTimer.cpp">
+      <Filter>Blocks\Asio\src</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\..\..\Asio\src\CinderAsio.h">
+      <Filter>Blocks\Asio\src</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\Asio\src\ClientEventHandlerInterface.h">
+      <Filter>Blocks\Asio\src</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\Asio\src\ClientInterface.h">
+      <Filter>Blocks\Asio\src</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\Asio\src\DispatcherEventHandlerInterface.h">
+      <Filter>Blocks\Asio\src</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\Asio\src\DispatcherInterface.h">
+      <Filter>Blocks\Asio\src</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\Asio\src\ServerEventHandlerInterface.h">
+      <Filter>Blocks\Asio\src</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\Asio\src\ServerInterface.h">
+      <Filter>Blocks\Asio\src</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\Asio\src\SessionEventHandlerInterface.h">
+      <Filter>Blocks\Asio\src</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\Asio\src\SessionInterface.h">
+      <Filter>Blocks\Asio\src</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\Asio\src\TcpClient.h">
+      <Filter>Blocks\Asio\src</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\Asio\src\TcpClientEventHandlerInterface.h">
+      <Filter>Blocks\Asio\src</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\Asio\src\TcpServer.h">
+      <Filter>Blocks\Asio\src</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\Asio\src\TcpServerEventHandlerInterface.h">
+      <Filter>Blocks\Asio\src</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\Asio\src\TcpSession.h">
+      <Filter>Blocks\Asio\src</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\Asio\src\TcpSessionEventHandlerInterface.h">
+      <Filter>Blocks\Asio\src</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\Asio\src\UdpClient.h">
+      <Filter>Blocks\Asio\src</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\Asio\src\UdpClientEventHandlerInterface.h">
+      <Filter>Blocks\Asio\src</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\Asio\src\UdpServer.h">
+      <Filter>Blocks\Asio\src</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\Asio\src\UdpServerEventHandlerInterface.h">
+      <Filter>Blocks\Asio\src</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\Asio\src\UdpSession.h">
+      <Filter>Blocks\Asio\src</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\Asio\src\UdpSessionEventHandlerInterface.h">
+      <Filter>Blocks\Asio\src</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\Asio\src\WaitTimer.h">
+      <Filter>Blocks\Asio\src</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\Asio\src\WaitTimerEventHandlerInterface.h">
+      <Filter>Blocks\Asio\src</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\src\OpcClient.h">
+      <Filter>Blocks\OpenPixelControl\src</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\src\OpcConstants.h">
+      <Filter>Blocks\OpenPixelControl\src</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\src\OpcServer.h">
+      <Filter>Blocks\OpenPixelControl\src</Filter>
+    </ClInclude>
+    <ClCompile Include="..\..\..\src\OpcClient.cpp">
+      <Filter>Blocks\OpenPixelControl\src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\src\OpcServer.cpp">
+      <Filter>Blocks\OpenPixelControl\src</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\include\Resources.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="Resources.rc">
+      <Filter>Resource Files</Filter>
+    </ResourceCompile>
+  </ItemGroup>
+</Project>
