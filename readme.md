@@ -19,7 +19,7 @@ This implementation is certainly not the leanest out there, but it tries to leve
 
 The [OpenPixelControl](http://openpixelcontrol.org) spec and reference implementation was created by [Ka-Ping Yee](https://github.com/zestyping).
 
-[Micah Elizabeth Scott](https://github.com/scanlime) has done a ton of significant work on top of this protocol for her [Fadecandy](https://github.com/scanlime/fadecandy) project, including hardware controllers and OPC wrapper libraries for a number of frameworks and platforms.
+[Micah Elizabeth Scott](https://github.com/scanlime) has done a ton of significant work on top of the OPC protocol for her [Fadecandy](https://github.com/scanlime/fadecandy) project, including hardware controllers and OPC wrapper libraries for a number of frameworks and platforms.
 
 ## Dependencies
 
