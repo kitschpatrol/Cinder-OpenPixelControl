@@ -43,6 +43,10 @@ Server::Server(int numLeds, int32_t port, ColorOrder colorOrder) {
 
 Server::~Server() {
 	CI_LOG_V("Client Destroyed");
+
+	// clean up queue
+	mBufferQueue.clear();
+
 	mTcpServer->cancel();
 }
 
@@ -82,62 +86,72 @@ void Server::onRead(ci::BufferRef buffer) {
 	// See http://openpixelcontrol.org for spec.
 	// Note that support for multiple channels is not implemented.
 
-	parseBufferWithOffset(buffer, 0);
+	// Enqueue received message
+	const uint8_t *data = static_cast<const uint8_t *>(buffer->getData());
+	for (int i = 0; i < buffer->getSize(); i++) {
+		mBufferQueue.push_back(data[i]);
+	}
+
+	// Parse if possible
+	bool isMoreToParse = true;
+	while (isMoreToParse) {
+		isMoreToParse = parseQueue(mBufferQueue);
+	}
 
 	// Read next message
 	mTcpSession->read();
 }
 
-void Server::parseBufferWithOffset(ci::BufferRef buffer, int offset) {
-	if (buffer->getSize() < HEADER_LENGTH) {
-		CI_LOG_E("Received OPC message with length: " << buffer->getSize() << " Too short.");
-	} else {
-		const uint8_t *data = static_cast<const uint8_t *>(buffer->getData());
-		const uint8_t channel = data[0 + offset];																	 // 0 is broadcast to all channels
-		const uint8_t command = data[1 + offset];																	 // 0 is set pixel color
-		const uint16_t ledDataLength = (data[2 + offset] << 8) | data[3 + offset]; //
-		const int numLeds = ledDataLength / BYTES_PER_LED;
-		const int expectedLength = HEADER_LENGTH + ledDataLength;
-		int nextOffset = 0;
+bool Server::parseQueue(std::deque<uint8_t> &queue) {
 
-		// Decide if we need to parse this buffer in chunks
-		if (buffer->getSize() - offset > expectedLength) {
-			nextOffset = offset + expectedLength;
-			CI_LOG_E("OPC message was larger than promised length. Will parse again with an offset. Expected length: " << static_cast<int>(expectedLength)
-																																																								 << "\tReceived length: " << buffer->getSize());
-		}
+	// Validate the queue
+	if (queue.size() < HEADER_LENGTH) {
+		// CI_LOG_E("Received OPC message with length: " << queue.size() << " Too short.");
+		return false;
+	}
 
-		// Validate packet
-		if (buffer->getSize() - offset < expectedLength) {
-			CI_LOG_E("OPC message too short. Expected length: " << static_cast<int>(expectedLength) << "\tReceived length: " << buffer->getSize());
-		} else if (command != 0) {
-			CI_LOG_E("OPC message has unsupported command type: " << static_cast<int>(command));
-		} else if (numLeds > mNumLeds) {
-			CI_LOG_E("OPC message data too long: " << numLeds);
-		} else if (channel != 0) {
-			CI_LOG_E("OPC message was for channel: " << static_cast<int>(channel) << " Cinder OPC Block does not currently support multiple channels.");
-		} else {
-			// Everything looks ok
-			mNumMessagesReceived++;
+	// Peek into the queue
+	const uint8_t channel = queue[0];													 // 0 is broadcast to all channels
+	const uint8_t command = queue[1];													 // 0 is set pixel color
+	const uint16_t ledDataLength = (queue[2] << 8) | queue[3]; //
+	const int numLeds = ledDataLength / BYTES_PER_LED;
+	const int expectedLength = HEADER_LENGTH + ledDataLength;
 
-			// CI_LOG_V("Channel: " << static_cast<int>(channel) << "\tCommand: " << static_cast<int>(command) << "\tLength: " << length);
+	if (queue.size() < expectedLength) {
+		// CI_LOG_E("OPC message too short. Expected length: " << static_cast<int>(expectedLength) << "\tReceived length: " << queue.size());
+		return false;
+	}
 
-			// Set the model from the data
-			const int *colorOrder = &(COLOR_ORDER_LOOKUP[mColorOrder][0]);
+	if (command != 0) {
+		CI_LOG_E("OPC message has unsupported command type: " << static_cast<int>(command));
+		return false;
+	}
 
-			for (int i = 0; i < numLeds; i++) {
-				const int ledIndex = HEADER_LENGTH + (i * BYTES_PER_LED) + offset;
-				mChannels[channel][i][colorOrder[0]] = data[ledIndex];
-				mChannels[channel][i][colorOrder[1]] = data[ledIndex + 1];
-				mChannels[channel][i][colorOrder[2]] = data[ledIndex + 2];
-			}
-		}
+	if (channel != 0) {
+		CI_LOG_E("OPC message was for channel: " << static_cast<int>(channel) << " Cinder OPC Block does not currently support multiple channels.");
+		return false;
+	}
 
-		// Recurse if needed
-		if (nextOffset != 0) {
-			parseBufferWithOffset(buffer, nextOffset);
+	// Everything looks ok, read the data off the front
+	mNumMessagesReceived++;
+
+	// CI_LOG_V("Channel: " << static_cast<int>(channel) << "\tCommand: " << static_cast<int>(command) << "\tLength: " << length);
+
+	// Set the model from the data
+	const int *colorOrder = &(COLOR_ORDER_LOOKUP[mColorOrder][0]);
+
+	for (int i = 0; i < numLeds; i++) {
+		const int ledIndex = HEADER_LENGTH + (i * BYTES_PER_LED);
+
+		for (int k = 0; k < 3; k++) {
+			mChannels[channel][i][colorOrder[k]] = queue[ledIndex + k];
 		}
 	}
+
+	// Clear what we read from the queue
+	queue.erase(queue.begin(), queue.begin() + expectedLength);
+
+	return true;
 }
 
 void Server::onReadComplete() {

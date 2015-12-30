@@ -13,7 +13,6 @@ class OpcBasicServerApp : public App {
 public:
 	static void prepareSettings(Settings *settings);
 	void setup() override;
-	void mouseDown(MouseEvent event) override;
 	void update() override;
 	void draw() override;
 
@@ -22,17 +21,14 @@ private:
 };
 
 void OpcBasicServerApp::prepareSettings(Settings *settings) {
-	settings->setPowerManagementEnabled(true);
+	settings->setPowerManagementEnabled(true); // Prevent App Nap
 	settings->setTitle("OPC Basic Server Sample App");
 }
 
 void OpcBasicServerApp::setup() {
-	// Create OPC Server simulating a 64 LED strip.
+	// Create OPC Server simulating a 32 LED strip.
 	// Listen on port 7890.
 	mOpcServer = kp::opc::Server::create(32, 7890);
-}
-
-void OpcBasicServerApp::mouseDown(MouseEvent event) {
 }
 
 void OpcBasicServerApp::update() {
@@ -41,7 +37,7 @@ void OpcBasicServerApp::update() {
 void OpcBasicServerApp::draw() {
 	gl::clear(Color(0, 0, 0));
 
-	// Draw LEDs as
+	// Draw LEDs as circles
 	const int numLeds = mOpcServer->getLeds().size();
 	const float spacing = getWindowWidth() / static_cast<float>(numLeds);
 	const float radius = (spacing * 0.8) / 2.0;
@@ -64,6 +60,7 @@ void OpcBasicServerApp::draw() {
 	TextBox textBox = TextBox().size(ivec2(200, 15)).text("Messages received: " + toString(mOpcServer->getNumMessagesReceived()));
 	gl::pushMatrices();
 	gl::translate(10.0, 10.0);
+	gl::color(Color("white"));
 	gl::draw(gl::Texture2d::create(textBox.render()));
 	gl::popMatrices();
 }

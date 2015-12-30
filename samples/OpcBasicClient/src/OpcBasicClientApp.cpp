@@ -23,7 +23,7 @@ private:
 };
 
 void OpcBasicClientApp::prepareSettings(Settings *settings) {
-	settings->setPowerManagementEnabled(true);
+	settings->setPowerManagementEnabled(true); // Prevent App Nap
 	settings->setTitle("OPC Basic Client Sample App");
 }
 
@@ -55,6 +55,7 @@ void OpcBasicClientApp::draw() {
 	TextBox textBox = TextBox().size(ivec2(200, 15)).text("Messages sent: " + toString(mOpcClient->getNumMessagesSent()));
 	gl::pushMatrices();
 	gl::translate(10.0, 10.0);
+	gl::color(Color("white"));
 	gl::draw(gl::Texture2d::create(textBox.render()));
 	gl::popMatrices();
 }

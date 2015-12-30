@@ -150,19 +150,12 @@ void Client::setLED(int index, ci::Color8u color) {
 
 	const int *colorOrder = &(COLOR_ORDER_LOOKUP[mColorOrder][0]);
 
-	if (bufferData[ledOffset] != color[colorOrder[0]]) {
-		bufferData[ledOffset] = color[colorOrder[0]];
-		mLedsNeedUpdate = true;
-	}
-
-	if (bufferData[ledOffset + 1] != color[colorOrder[1]]) {
-		bufferData[ledOffset + 1] = color[colorOrder[1]];
-		mLedsNeedUpdate = true;
-	}
-
-	if (bufferData[ledOffset + 2] != color[colorOrder[2]]) {
-		bufferData[ledOffset + 2] = color[colorOrder[2]];
-		mLedsNeedUpdate = true;
+	// Check each channel for a difference and set if needed
+	for (int i = 0; i < 3; i++) {
+		if (bufferData[ledOffset + i] != color[colorOrder[i]]) {
+			bufferData[ledOffset + i] = color[colorOrder[i]];
+			mLedsNeedUpdate = true;
+		}
 	}
 }
 

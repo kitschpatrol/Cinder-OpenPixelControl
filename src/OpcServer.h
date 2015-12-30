@@ -40,6 +40,7 @@ private:
 	TcpSessionRef mTcpSession;
 	int32_t mPort;
 	kp::opc::ColorOrder mColorOrder;
+	std::deque<uint8_t> mBufferQueue;
 
 	void accept();
 	void onAccept(TcpSessionRef session);
@@ -48,7 +49,7 @@ private:
 	void onError(std::string err, size_t bytesTransferred);
 	void onRead(ci::BufferRef buffer);
 	void onReadComplete();
-	void parseBufferWithOffset(ci::BufferRef buffer, int offset);
+	bool parseQueue(std::deque<uint8_t> &queue);
 };
 
 } // namespace opc
