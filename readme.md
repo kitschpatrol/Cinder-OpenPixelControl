@@ -46,3 +46,4 @@ The sample projects are already set accordingly.
 - Test on Windows.
 - Support for channels.
 - Better support for layout JSON.
+- Usue queue instead of deque for packet accumulation + parsing?
