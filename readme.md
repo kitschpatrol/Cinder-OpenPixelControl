@@ -21,6 +21,8 @@ The [OpenPixelControl](http://openpixelcontrol.org) spec and reference implement
 
 [Micah Elizabeth Scott](https://github.com/scanlime) has done a ton of significant work on top of the OPC protocol for her [Fadecandy](https://github.com/scanlime/fadecandy) project, including hardware controllers and OPC wrapper libraries for a number of frameworks and platforms.
 
+Shortly after finishing this block, I discovered James Hurlbut's [FadeCandyCinderClient](https://github.com/jhurlbut/FadeCandyCinderClient) which includes a very similar implementation of the client, and also ports over some of the neat visual effect classes from the Fadecandy project.
+
 ## Dependencies
 
 This block depends on the Cinder-Asio block. I recommend [Jean-Pierre Mouilleseaux fork](https://github.com/pizthewiz/Cinder-Asio/).
