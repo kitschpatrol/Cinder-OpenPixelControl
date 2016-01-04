@@ -24,7 +24,7 @@ public:
 	~Server();
 
 	// Support just a single channel for now
-	const std::vector<ci::Color8u> getLeds() const;
+	const std::vector<ci::Color> getLeds() const;
 
 	const unsigned long getNumMessagesReceived();
 
@@ -34,7 +34,7 @@ protected:
 private:
 	int mNumLeds;
 	unsigned long mNumMessagesReceived;
-	std::vector<std::vector<ci::Color8u>> mChannels;
+	std::vector<std::vector<ci::Color>> mChannels;
 
 	TcpServerRef mTcpServer;
 	TcpSessionRef mTcpSession;

@@ -124,33 +124,28 @@ bool Server::parseQueue(std::deque<uint8_t> &queue) {
 
 	if (command != 0) {
 		CI_LOG_E("OPC message has unsupported command type: " << static_cast<int>(command));
-		return false;
-	}
-
-	if (channel != 0) {
+	} else if (channel != 0) {
 		CI_LOG_E("OPC message was for channel: " << static_cast<int>(channel) << " Cinder OPC Block does not currently support multiple channels.");
-		return false;
-	}
+	} else {
+		// Everything looks ok, read the data off the front
+		mNumMessagesReceived++;
 
-	// Everything looks ok, read the data off the front
-	mNumMessagesReceived++;
+		// CI_LOG_V("Channel: " << static_cast<int>(channel) << "\tCommand: " << static_cast<int>(command) << "\tLength: " << length);
 
-	// CI_LOG_V("Channel: " << static_cast<int>(channel) << "\tCommand: " << static_cast<int>(command) << "\tLength: " << length);
+		// Set the model from the data
+		const int *colorOrder = &(COLOR_ORDER_LOOKUP[mColorOrder][0]);
 
-	// Set the model from the data
-	const int *colorOrder = &(COLOR_ORDER_LOOKUP[mColorOrder][0]);
+		for (int i = 0; i < numLeds; i++) {
+			const int ledIndex = HEADER_LENGTH + (i * BYTES_PER_LED);
 
-	for (int i = 0; i < numLeds; i++) {
-		const int ledIndex = HEADER_LENGTH + (i * BYTES_PER_LED);
-
-		for (int k = 0; k < 3; k++) {
-			mChannels[channel][i][colorOrder[k]] = queue[ledIndex + k];
+			for (int k = 0; k < 3; k++) {
+				mChannels[channel][i][colorOrder[k]] = queue[ledIndex + k] / 255.0;
+			}
 		}
 	}
 
 	// Clear what we read from the queue
 	queue.erase(queue.begin(), queue.begin() + expectedLength);
-
 	return true;
 }
 
@@ -171,7 +166,7 @@ void Server::onCancel() {
 	// CI_LOG_V("On Cancel");
 }
 
-const std::vector<ci::Color8u> Server::getLeds() const {
+const std::vector<ci::Color> Server::getLeds() const {
 	return mChannels[0];
 }
 
