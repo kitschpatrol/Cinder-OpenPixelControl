@@ -114,12 +114,17 @@ bool Server::parseQueue(std::deque<uint8_t> &queue) {
 	const uint8_t channel = queue[0];													 // 0 is broadcast to all channels
 	const uint8_t command = queue[1];													 // 0 is set pixel color
 	const uint16_t ledDataLength = (queue[2] << 8) | queue[3]; //
-	const int numLeds = ledDataLength / BYTES_PER_LED;
+	const int numLedsReceived = ledDataLength / BYTES_PER_LED;
 	const int expectedLength = HEADER_LENGTH + ledDataLength;
 
 	if (queue.size() < expectedLength) {
 		// CI_LOG_E("OPC message too short. Expected length: " << static_cast<int>(expectedLength) << "\tReceived length: " << queue.size());
 		return false;
+	}
+
+	if (numLedsReceived > mNumLeds) {
+		// CI_LOG_W("Received data for " << numLedsReceived << " but server only set up to represent " << mNumLeds << " leds.");
+		// We just discard any extras...
 	}
 
 	if (command != 0) {
@@ -135,7 +140,7 @@ bool Server::parseQueue(std::deque<uint8_t> &queue) {
 		// Set the model from the data
 		const int *colorOrder = &(COLOR_ORDER_LOOKUP[mColorOrder][0]);
 
-		for (int i = 0; i < numLeds; i++) {
+		for (int i = 0; i < mNumLeds; i++) {
 			const int ledIndex = HEADER_LENGTH + (i * BYTES_PER_LED);
 
 			for (int k = 0; k < 3; k++) {
