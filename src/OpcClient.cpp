@@ -85,12 +85,12 @@ void Client::onClientEndpointResolved() {
 }
 
 void Client::onClientError(std::string err, size_t bytesTransferred) {
-	CI_LOG_E("Client Error" << (err.empty() ? "" : (": " + err)));
-
 	//	// This is unpleasant...
 	if (!err.empty() && (err == "Connection refused")) {
 		// try to reconnect
 		connect();
+	} else {
+		CI_LOG_E("Client Error" << (err.empty() ? "" : (": " + err)));
 	}
 }
 
