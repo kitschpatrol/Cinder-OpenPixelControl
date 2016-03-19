@@ -12,6 +12,7 @@
 #include "cinder/Utilities.h"
 #include "cinder/app/App.h"
 
+using namespace std;
 using namespace kp::opc;
 
 #pragma mark Lifecycle
@@ -106,7 +107,7 @@ bool Server::parseQueue(std::deque<uint8_t> &queue) {
 
 	// Validate the queue
 	if (queue.size() < HEADER_LENGTH) {
-		// CI_LOG_E("Received OPC message with length: " << queue.size() << " Too short.");
+		CI_LOG_E("Received OPC message with length: " << queue.size() << " Too short.");
 		return false;
 	}
 
@@ -123,7 +124,7 @@ bool Server::parseQueue(std::deque<uint8_t> &queue) {
 	}
 
 	if (numLedsReceived > mNumLeds) {
-		// CI_LOG_W("Received data for " << numLedsReceived << " but server only set up to represent " << mNumLeds << " leds.");
+		CI_LOG_W("Received data for " << numLedsReceived << " but server only set up to represent " << mNumLeds << " leds.");
 		// We just discard any extras...
 	}
 
@@ -140,7 +141,7 @@ bool Server::parseQueue(std::deque<uint8_t> &queue) {
 		// Set the model from the data
 		const int *colorOrder = &(COLOR_ORDER_LOOKUP[mColorOrder][0]);
 
-		for (int i = 0; i < mNumLeds; i++) {
+		for (int i = 0; i < std::min(numLedsReceived, mNumLeds); i++) {
 			const int ledIndex = HEADER_LENGTH + (i * BYTES_PER_LED);
 
 			for (int k = 0; k < 3; k++) {
