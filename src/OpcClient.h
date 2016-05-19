@@ -7,7 +7,7 @@
 #pragma once
 
 #include "CinderAsio.h"
-#include "cinder/Cinder.h"
+#include "cinder/Color.h"
 
 #include "OpcConstants.h"
 #include "TcpClient.h"

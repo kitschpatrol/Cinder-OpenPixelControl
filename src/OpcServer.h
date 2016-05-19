@@ -9,8 +9,9 @@
 #pragma once
 
 #include "TcpServer.h"
-
+#include "cinder/Color.h"
 #include "OpcConstants.h"
+#include <deque>
 
 namespace kp {
 namespace opc {
