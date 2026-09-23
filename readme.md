@@ -2,7 +2,6 @@
 
 **A [Cinder](https://libcinder.org) block providing a basic implementation of the [OpenPixelControl](http://openpixelcontrol.org) protocol for controlling large numbers of LEDs in real-time over TCP/IP. Networking provided by the [Cinder-Asio block](https://github.com/BanTheRewind/Cinder-Asio).**
 
-
 ## Getting Started
 
 Run both the OpcBasicClient and OpcBasicServer samples simultaneously on the same machine to see OPC commands passing from client to (virtual) server.
@@ -13,19 +12,19 @@ This library foregoes direct support for JSON layout files, but the OpcLayoutCli
 
 Channels are currently unsupported.
 
-This implementation is certainly not the leanest out there, but it tries to leverage Cinder's abstractions where possible. (e.g. ci::Color, asio::io_service, etc.) 
+This implementation is certainly not the leanest out there, but it tries to leverage Cinder's abstractions where possible. (e.g. `ci::Color`, `asio::io_service`, etc.)
 
 ## Origin
 
 The [OpenPixelControl](http://openpixelcontrol.org) spec and reference implementation was created by [Ka-Ping Yee](https://github.com/zestyping).
 
-[Micah Elizabeth Scott](https://github.com/scanlime) has done a ton of significant work on top of the OPC protocol for her [Fadecandy](https://github.com/scanlime/fadecandy) project, including hardware controllers and OPC wrapper libraries for a number of frameworks and platforms.
+[Micah Elizabeth Scott](https://scanlime.org/) has done a ton of significant work on top of the OPC protocol for her [Fadecandy](https://github.com/kitschpatrol/fadecandy) project, including hardware controllers and OPC wrapper libraries for a number of frameworks and platforms.
 
 Shortly after finishing this block, I discovered James Hurlbut's [FadeCandyCinderClient](https://github.com/jhurlbut/FadeCandyCinderClient) which includes a very similar implementation of the client, and also ports over some of the neat visual effect classes from the Fadecandy project.
 
 ## Dependencies
 
-This block depends on the Cinder-Asio block. I recommend [Jean-Pierre Mouilleseaux fork](https://github.com/pizthewiz/Cinder-Asio/).
+This block depends on the Cinder-Asio block. I recommend Jean-Pierre Mouilleseaux fork (no longer available on GitHub).
 
 ## Known Issues
 
@@ -34,16 +33,18 @@ This block depends on the Cinder-Asio block. I recommend [Jean-Pierre Mouillesea
 Cinder-Asio needs to be added as the first include to the precompiled header file. See the examples for an example. If you forget this step, you will see "No member named 'error' in namespace 'asio::placeholders'" errors and similar.
 
 ### Mac
+
 If you're running your OPC client or server in the background, [App Nap](https://developer.apple.com/library/mac/documentation/Performance/Conceptual/power_efficiency_guidelines_osx/AppNap.html) will slow down and eventually completely stop network transmissions.
 
 To disable App Nap, add the following to your app's prepareSettings function:
 
-		settings->setPowerManagementEnabled(true);
+```cpp
+settings->setPowerManagementEnabled(true);
+```
 
 The sample projects are already set accordingly.
 
-
-##TODO
+## TODO
 
 - Test on Windows.
 - Support for channels.
