@@ -38,12 +38,10 @@ From your Cinder `blocks` directory:
 
 ```sh
 git clone https://github.com/kitschpatrol/Cinder-OpenPixelControl.git
-git clone https://github.com/BanTheRewind/Cinder-Asio.git Asio
+git clone https://github.com/BanTheRewind/Cinder-Asio.git
 ```
 
 Then add **OpenPixelControl** to a project with [TinderBox](https://libcinder.org/docs/guides/tinderbox/index.html). The block manifest lists Cinder-Asio (`asio.bantherewind.com`) as a requirement.
-
-The sample projects expect Cinder-Asio in a `blocks/Asio` directory, which is why the second command clones it under that name.
 
 ## Usage
 

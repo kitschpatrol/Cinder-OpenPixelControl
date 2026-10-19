@@ -83,40 +83,40 @@
 		F2225BDED4634805903959D7 /* CinderApp.icns */ = {isa = PBXFileReference; lastKnownFileType = image.icns; path = ../resources/CinderApp.icns; sourceTree = "<group>"; name = CinderApp.icns; };
 		37D6B791507D482A887E2C8C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; name = Info.plist; };
 		6A651E1B7D08422387FC4451 /* OpcLayoutServer_Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = "\"\""; path = OpcLayoutServer_Prefix.pch; sourceTree = "<group>"; name = OpcLayoutServer_Prefix.pch; };
-		6CCA727AD528413FB98B34F2 /* ClientInterface.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.cpp; path = ../../../../Asio/src/ClientInterface.cpp; sourceTree = "<group>"; name = ClientInterface.cpp; };
-		65D432C108D24EC2962A9E35 /* DispatcherInterface.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.cpp; path = ../../../../Asio/src/DispatcherInterface.cpp; sourceTree = "<group>"; name = DispatcherInterface.cpp; };
-		940DBF223C4A419299292241 /* ServerInterface.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.cpp; path = ../../../../Asio/src/ServerInterface.cpp; sourceTree = "<group>"; name = ServerInterface.cpp; };
-		EDD3C4D4FAE64F83A7C00ED5 /* SessionInterface.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.cpp; path = ../../../../Asio/src/SessionInterface.cpp; sourceTree = "<group>"; name = SessionInterface.cpp; };
-		F467B23F788F4A7196BF8155 /* TcpClient.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.cpp; path = ../../../../Asio/src/TcpClient.cpp; sourceTree = "<group>"; name = TcpClient.cpp; };
-		8BCE1ED34AA84D7699221247 /* TcpServer.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.cpp; path = ../../../../Asio/src/TcpServer.cpp; sourceTree = "<group>"; name = TcpServer.cpp; };
-		3E6FE1E49E294557BCA970E7 /* TcpSession.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.cpp; path = ../../../../Asio/src/TcpSession.cpp; sourceTree = "<group>"; name = TcpSession.cpp; };
-		0241671DEFC2473B80329A27 /* UdpClient.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.cpp; path = ../../../../Asio/src/UdpClient.cpp; sourceTree = "<group>"; name = UdpClient.cpp; };
-		30BD30D0DB6249779A3BAC85 /* UdpServer.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.cpp; path = ../../../../Asio/src/UdpServer.cpp; sourceTree = "<group>"; name = UdpServer.cpp; };
-		B37D859087244980977DCC68 /* UdpSession.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.cpp; path = ../../../../Asio/src/UdpSession.cpp; sourceTree = "<group>"; name = UdpSession.cpp; };
-		B7B3C23A5CBE4353B036F98E /* WaitTimer.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.cpp; path = ../../../../Asio/src/WaitTimer.cpp; sourceTree = "<group>"; name = WaitTimer.cpp; };
-		A5732E31BB16438D8663E3A9 /* CinderAsio.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ../../../../Asio/src/CinderAsio.h; sourceTree = "<group>"; name = CinderAsio.h; };
-		B3D7BA8842C54FA792A2D458 /* ClientEventHandlerInterface.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ../../../../Asio/src/ClientEventHandlerInterface.h; sourceTree = "<group>"; name = ClientEventHandlerInterface.h; };
-		4E55B73B0DC340E9923AC3B2 /* ClientInterface.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ../../../../Asio/src/ClientInterface.h; sourceTree = "<group>"; name = ClientInterface.h; };
-		79A3B5F57E0F4B66ACD5C366 /* DispatcherEventHandlerInterface.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ../../../../Asio/src/DispatcherEventHandlerInterface.h; sourceTree = "<group>"; name = DispatcherEventHandlerInterface.h; };
-		C6917BD588194E478DAB8250 /* DispatcherInterface.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ../../../../Asio/src/DispatcherInterface.h; sourceTree = "<group>"; name = DispatcherInterface.h; };
-		2BD096805201440BBDB73B4C /* ServerEventHandlerInterface.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ../../../../Asio/src/ServerEventHandlerInterface.h; sourceTree = "<group>"; name = ServerEventHandlerInterface.h; };
-		E1718EDB9DC846CEACC1C4F9 /* ServerInterface.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ../../../../Asio/src/ServerInterface.h; sourceTree = "<group>"; name = ServerInterface.h; };
-		F3789CD4457A4717BA99C84B /* SessionEventHandlerInterface.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ../../../../Asio/src/SessionEventHandlerInterface.h; sourceTree = "<group>"; name = SessionEventHandlerInterface.h; };
-		E3D8A9CA2B504D819F27C9E3 /* SessionInterface.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ../../../../Asio/src/SessionInterface.h; sourceTree = "<group>"; name = SessionInterface.h; };
-		1F12F517147242C1B5BAE486 /* TcpClient.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ../../../../Asio/src/TcpClient.h; sourceTree = "<group>"; name = TcpClient.h; };
-		CFEA76F9DFB84C38A536E552 /* TcpClientEventHandlerInterface.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ../../../../Asio/src/TcpClientEventHandlerInterface.h; sourceTree = "<group>"; name = TcpClientEventHandlerInterface.h; };
-		DD418FC59C284531BE583ACE /* TcpServer.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ../../../../Asio/src/TcpServer.h; sourceTree = "<group>"; name = TcpServer.h; };
-		D98EDA9EF1164D4FA34EE14E /* TcpServerEventHandlerInterface.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ../../../../Asio/src/TcpServerEventHandlerInterface.h; sourceTree = "<group>"; name = TcpServerEventHandlerInterface.h; };
-		A38B587BAB17429D96ACB601 /* TcpSession.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ../../../../Asio/src/TcpSession.h; sourceTree = "<group>"; name = TcpSession.h; };
-		DA11C068338A4A39B800D320 /* TcpSessionEventHandlerInterface.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ../../../../Asio/src/TcpSessionEventHandlerInterface.h; sourceTree = "<group>"; name = TcpSessionEventHandlerInterface.h; };
-		A9EF4B75BE9B46F19B8C3A9E /* UdpClient.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ../../../../Asio/src/UdpClient.h; sourceTree = "<group>"; name = UdpClient.h; };
-		6367BE0259DA4B198B4412DE /* UdpClientEventHandlerInterface.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ../../../../Asio/src/UdpClientEventHandlerInterface.h; sourceTree = "<group>"; name = UdpClientEventHandlerInterface.h; };
-		EA5DA789B84542DD92E0C5E2 /* UdpServer.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ../../../../Asio/src/UdpServer.h; sourceTree = "<group>"; name = UdpServer.h; };
-		89E61F079AF44F7588685D28 /* UdpServerEventHandlerInterface.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ../../../../Asio/src/UdpServerEventHandlerInterface.h; sourceTree = "<group>"; name = UdpServerEventHandlerInterface.h; };
-		222817EB40684549A0921201 /* UdpSession.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ../../../../Asio/src/UdpSession.h; sourceTree = "<group>"; name = UdpSession.h; };
-		1D195545837D46BEBC2B312F /* UdpSessionEventHandlerInterface.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ../../../../Asio/src/UdpSessionEventHandlerInterface.h; sourceTree = "<group>"; name = UdpSessionEventHandlerInterface.h; };
-		D20B8607BF0E43ACACE00BF8 /* WaitTimer.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ../../../../Asio/src/WaitTimer.h; sourceTree = "<group>"; name = WaitTimer.h; };
-		F47D2210242D4B738A0F001F /* WaitTimerEventHandlerInterface.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ../../../../Asio/src/WaitTimerEventHandlerInterface.h; sourceTree = "<group>"; name = WaitTimerEventHandlerInterface.h; };
+		6CCA727AD528413FB98B34F2 /* ClientInterface.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.cpp; path = ../../../../Cinder-Asio/src/ClientInterface.cpp; sourceTree = "<group>"; name = ClientInterface.cpp; };
+		65D432C108D24EC2962A9E35 /* DispatcherInterface.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.cpp; path = ../../../../Cinder-Asio/src/DispatcherInterface.cpp; sourceTree = "<group>"; name = DispatcherInterface.cpp; };
+		940DBF223C4A419299292241 /* ServerInterface.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.cpp; path = ../../../../Cinder-Asio/src/ServerInterface.cpp; sourceTree = "<group>"; name = ServerInterface.cpp; };
+		EDD3C4D4FAE64F83A7C00ED5 /* SessionInterface.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.cpp; path = ../../../../Cinder-Asio/src/SessionInterface.cpp; sourceTree = "<group>"; name = SessionInterface.cpp; };
+		F467B23F788F4A7196BF8155 /* TcpClient.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.cpp; path = ../../../../Cinder-Asio/src/TcpClient.cpp; sourceTree = "<group>"; name = TcpClient.cpp; };
+		8BCE1ED34AA84D7699221247 /* TcpServer.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.cpp; path = ../../../../Cinder-Asio/src/TcpServer.cpp; sourceTree = "<group>"; name = TcpServer.cpp; };
+		3E6FE1E49E294557BCA970E7 /* TcpSession.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.cpp; path = ../../../../Cinder-Asio/src/TcpSession.cpp; sourceTree = "<group>"; name = TcpSession.cpp; };
+		0241671DEFC2473B80329A27 /* UdpClient.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.cpp; path = ../../../../Cinder-Asio/src/UdpClient.cpp; sourceTree = "<group>"; name = UdpClient.cpp; };
+		30BD30D0DB6249779A3BAC85 /* UdpServer.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.cpp; path = ../../../../Cinder-Asio/src/UdpServer.cpp; sourceTree = "<group>"; name = UdpServer.cpp; };
+		B37D859087244980977DCC68 /* UdpSession.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.cpp; path = ../../../../Cinder-Asio/src/UdpSession.cpp; sourceTree = "<group>"; name = UdpSession.cpp; };
+		B7B3C23A5CBE4353B036F98E /* WaitTimer.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.cpp; path = ../../../../Cinder-Asio/src/WaitTimer.cpp; sourceTree = "<group>"; name = WaitTimer.cpp; };
+		A5732E31BB16438D8663E3A9 /* CinderAsio.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ../../../../Cinder-Asio/src/CinderAsio.h; sourceTree = "<group>"; name = CinderAsio.h; };
+		B3D7BA8842C54FA792A2D458 /* ClientEventHandlerInterface.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ../../../../Cinder-Asio/src/ClientEventHandlerInterface.h; sourceTree = "<group>"; name = ClientEventHandlerInterface.h; };
+		4E55B73B0DC340E9923AC3B2 /* ClientInterface.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ../../../../Cinder-Asio/src/ClientInterface.h; sourceTree = "<group>"; name = ClientInterface.h; };
+		79A3B5F57E0F4B66ACD5C366 /* DispatcherEventHandlerInterface.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ../../../../Cinder-Asio/src/DispatcherEventHandlerInterface.h; sourceTree = "<group>"; name = DispatcherEventHandlerInterface.h; };
+		C6917BD588194E478DAB8250 /* DispatcherInterface.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ../../../../Cinder-Asio/src/DispatcherInterface.h; sourceTree = "<group>"; name = DispatcherInterface.h; };
+		2BD096805201440BBDB73B4C /* ServerEventHandlerInterface.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ../../../../Cinder-Asio/src/ServerEventHandlerInterface.h; sourceTree = "<group>"; name = ServerEventHandlerInterface.h; };
+		E1718EDB9DC846CEACC1C4F9 /* ServerInterface.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ../../../../Cinder-Asio/src/ServerInterface.h; sourceTree = "<group>"; name = ServerInterface.h; };
+		F3789CD4457A4717BA99C84B /* SessionEventHandlerInterface.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ../../../../Cinder-Asio/src/SessionEventHandlerInterface.h; sourceTree = "<group>"; name = SessionEventHandlerInterface.h; };
+		E3D8A9CA2B504D819F27C9E3 /* SessionInterface.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ../../../../Cinder-Asio/src/SessionInterface.h; sourceTree = "<group>"; name = SessionInterface.h; };
+		1F12F517147242C1B5BAE486 /* TcpClient.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ../../../../Cinder-Asio/src/TcpClient.h; sourceTree = "<group>"; name = TcpClient.h; };
+		CFEA76F9DFB84C38A536E552 /* TcpClientEventHandlerInterface.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ../../../../Cinder-Asio/src/TcpClientEventHandlerInterface.h; sourceTree = "<group>"; name = TcpClientEventHandlerInterface.h; };
+		DD418FC59C284531BE583ACE /* TcpServer.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ../../../../Cinder-Asio/src/TcpServer.h; sourceTree = "<group>"; name = TcpServer.h; };
+		D98EDA9EF1164D4FA34EE14E /* TcpServerEventHandlerInterface.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ../../../../Cinder-Asio/src/TcpServerEventHandlerInterface.h; sourceTree = "<group>"; name = TcpServerEventHandlerInterface.h; };
+		A38B587BAB17429D96ACB601 /* TcpSession.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ../../../../Cinder-Asio/src/TcpSession.h; sourceTree = "<group>"; name = TcpSession.h; };
+		DA11C068338A4A39B800D320 /* TcpSessionEventHandlerInterface.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ../../../../Cinder-Asio/src/TcpSessionEventHandlerInterface.h; sourceTree = "<group>"; name = TcpSessionEventHandlerInterface.h; };
+		A9EF4B75BE9B46F19B8C3A9E /* UdpClient.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ../../../../Cinder-Asio/src/UdpClient.h; sourceTree = "<group>"; name = UdpClient.h; };
+		6367BE0259DA4B198B4412DE /* UdpClientEventHandlerInterface.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ../../../../Cinder-Asio/src/UdpClientEventHandlerInterface.h; sourceTree = "<group>"; name = UdpClientEventHandlerInterface.h; };
+		EA5DA789B84542DD92E0C5E2 /* UdpServer.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ../../../../Cinder-Asio/src/UdpServer.h; sourceTree = "<group>"; name = UdpServer.h; };
+		89E61F079AF44F7588685D28 /* UdpServerEventHandlerInterface.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ../../../../Cinder-Asio/src/UdpServerEventHandlerInterface.h; sourceTree = "<group>"; name = UdpServerEventHandlerInterface.h; };
+		222817EB40684549A0921201 /* UdpSession.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ../../../../Cinder-Asio/src/UdpSession.h; sourceTree = "<group>"; name = UdpSession.h; };
+		1D195545837D46BEBC2B312F /* UdpSessionEventHandlerInterface.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ../../../../Cinder-Asio/src/UdpSessionEventHandlerInterface.h; sourceTree = "<group>"; name = UdpSessionEventHandlerInterface.h; };
+		D20B8607BF0E43ACACE00BF8 /* WaitTimer.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ../../../../Cinder-Asio/src/WaitTimer.h; sourceTree = "<group>"; name = WaitTimer.h; };
+		F47D2210242D4B738A0F001F /* WaitTimerEventHandlerInterface.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ../../../../Cinder-Asio/src/WaitTimerEventHandlerInterface.h; sourceTree = "<group>"; name = WaitTimerEventHandlerInterface.h; };
 		B34A3D04D23E41CD94254A0A /* OpcClient.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ../../../src/OpcClient.h; sourceTree = "<group>"; name = OpcClient.h; };
 		92C18F86CC5C40F79FA9229F /* OpcConstants.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ../../../src/OpcConstants.h; sourceTree = "<group>"; name = OpcConstants.h; };
 		BF42AB8AF9AF44249E84B709 /* OpcServer.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ../../../src/OpcServer.h; sourceTree = "<group>"; name = OpcServer.h; };
@@ -458,7 +458,7 @@
 				SDKROOT = macosx;
 				USER_HEADER_SEARCH_PATHS = (
 					"\"$(CINDER_PATH)/include\" ../include",
-					../../../../Asio/src,
+					../../../../Cinder-Asio/src,
 				);
 			};
 			name = Debug;
@@ -477,7 +477,7 @@
 				SDKROOT = macosx;
 				USER_HEADER_SEARCH_PATHS = (
 					"\"$(CINDER_PATH)/include\" ../include",
-					../../../../Asio/src,
+					../../../../Cinder-Asio/src,
 				);
 			};
 			name = Release;

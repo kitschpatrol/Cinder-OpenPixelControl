@@ -78,7 +78,7 @@
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <ClCompile>
       <Optimization>Disabled</Optimization>
-      <AdditionalIncludeDirectories>..\include;"..\..\..\..\..\include";..\..\..\..\Asio\src;..\..\..\src</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>..\include;"..\..\..\..\..\include";..\..\..\..\Cinder-Asio\src;..\..\..\src</AdditionalIncludeDirectories>
       <PreprocessorDefinitions>WIN32;_WIN32_WINNT=0x0601;_WINDOWS;NOMINMAX;_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <MinimalRebuild>true</MinimalRebuild>
       <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
@@ -105,7 +105,7 @@
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
     <ClCompile>
       <Optimization>Disabled</Optimization>
-      <AdditionalIncludeDirectories>..\include;"..\..\..\..\..\include";..\..\..\..\Asio\src;..\..\..\src</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>..\include;"..\..\..\..\..\include";..\..\..\..\Cinder-Asio\src;..\..\..\src</AdditionalIncludeDirectories>
       <PreprocessorDefinitions>WIN32;_WIN32_WINNT=0x0601;_WINDOWS;NOMINMAX;_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
       <RuntimeLibrary>MultiThreadedDebug</RuntimeLibrary>
@@ -129,7 +129,7 @@
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
     <ClCompile>
-      <AdditionalIncludeDirectories>..\include;"..\..\..\..\..\include";..\..\..\..\Asio\src;..\..\..\src</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>..\include;"..\..\..\..\..\include";..\..\..\..\Cinder-Asio\src;..\..\..\src</AdditionalIncludeDirectories>
       <PreprocessorDefinitions>WIN32;_WIN32_WINNT=0x0601;_WINDOWS;NOMINMAX;NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
       <PrecompiledHeader />
@@ -158,7 +158,7 @@
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
     <ClCompile>
-      <AdditionalIncludeDirectories>..\include;"..\..\..\..\..\include";..\..\..\..\Asio\src;..\..\..\src</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>..\include;"..\..\..\..\..\include";..\..\..\..\Cinder-Asio\src;..\..\..\src</AdditionalIncludeDirectories>
       <PreprocessorDefinitions>WIN32;_WIN32_WINNT=0x0601;_WINDOWS;NOMINMAX;NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
       <PrecompiledHeader />
@@ -191,45 +191,45 @@
   <ItemGroup />
   <ItemGroup>
     <ClCompile Include="..\src\OpcLayoutClientApp.cpp" />
-    <ClCompile Include="..\..\..\..\Asio\src\ClientInterface.cpp" />
-    <ClCompile Include="..\..\..\..\Asio\src\DispatcherInterface.cpp" />
-    <ClCompile Include="..\..\..\..\Asio\src\ServerInterface.cpp" />
-    <ClCompile Include="..\..\..\..\Asio\src\SessionInterface.cpp" />
-    <ClCompile Include="..\..\..\..\Asio\src\TcpClient.cpp" />
-    <ClCompile Include="..\..\..\..\Asio\src\TcpServer.cpp" />
-    <ClCompile Include="..\..\..\..\Asio\src\TcpSession.cpp" />
-    <ClCompile Include="..\..\..\..\Asio\src\UdpClient.cpp" />
-    <ClCompile Include="..\..\..\..\Asio\src\UdpServer.cpp" />
-    <ClCompile Include="..\..\..\..\Asio\src\UdpSession.cpp" />
-    <ClCompile Include="..\..\..\..\Asio\src\WaitTimer.cpp" />
+    <ClCompile Include="..\..\..\..\Cinder-Asio\src\ClientInterface.cpp" />
+    <ClCompile Include="..\..\..\..\Cinder-Asio\src\DispatcherInterface.cpp" />
+    <ClCompile Include="..\..\..\..\Cinder-Asio\src\ServerInterface.cpp" />
+    <ClCompile Include="..\..\..\..\Cinder-Asio\src\SessionInterface.cpp" />
+    <ClCompile Include="..\..\..\..\Cinder-Asio\src\TcpClient.cpp" />
+    <ClCompile Include="..\..\..\..\Cinder-Asio\src\TcpServer.cpp" />
+    <ClCompile Include="..\..\..\..\Cinder-Asio\src\TcpSession.cpp" />
+    <ClCompile Include="..\..\..\..\Cinder-Asio\src\UdpClient.cpp" />
+    <ClCompile Include="..\..\..\..\Cinder-Asio\src\UdpServer.cpp" />
+    <ClCompile Include="..\..\..\..\Cinder-Asio\src\UdpSession.cpp" />
+    <ClCompile Include="..\..\..\..\Cinder-Asio\src\WaitTimer.cpp" />
     <ClCompile Include="..\..\..\src\OpcClient.cpp" />
     <ClCompile Include="..\..\..\src\OpcServer.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\include\Resources.h" />
-    <ClInclude Include="..\..\..\..\Asio\src\CinderAsio.h" />
-    <ClInclude Include="..\..\..\..\Asio\src\ClientEventHandlerInterface.h" />
-    <ClInclude Include="..\..\..\..\Asio\src\ClientInterface.h" />
-    <ClInclude Include="..\..\..\..\Asio\src\DispatcherEventHandlerInterface.h" />
-    <ClInclude Include="..\..\..\..\Asio\src\DispatcherInterface.h" />
-    <ClInclude Include="..\..\..\..\Asio\src\ServerEventHandlerInterface.h" />
-    <ClInclude Include="..\..\..\..\Asio\src\ServerInterface.h" />
-    <ClInclude Include="..\..\..\..\Asio\src\SessionEventHandlerInterface.h" />
-    <ClInclude Include="..\..\..\..\Asio\src\SessionInterface.h" />
-    <ClInclude Include="..\..\..\..\Asio\src\TcpClient.h" />
-    <ClInclude Include="..\..\..\..\Asio\src\TcpClientEventHandlerInterface.h" />
-    <ClInclude Include="..\..\..\..\Asio\src\TcpServer.h" />
-    <ClInclude Include="..\..\..\..\Asio\src\TcpServerEventHandlerInterface.h" />
-    <ClInclude Include="..\..\..\..\Asio\src\TcpSession.h" />
-    <ClInclude Include="..\..\..\..\Asio\src\TcpSessionEventHandlerInterface.h" />
-    <ClInclude Include="..\..\..\..\Asio\src\UdpClient.h" />
-    <ClInclude Include="..\..\..\..\Asio\src\UdpClientEventHandlerInterface.h" />
-    <ClInclude Include="..\..\..\..\Asio\src\UdpServer.h" />
-    <ClInclude Include="..\..\..\..\Asio\src\UdpServerEventHandlerInterface.h" />
-    <ClInclude Include="..\..\..\..\Asio\src\UdpSession.h" />
-    <ClInclude Include="..\..\..\..\Asio\src\UdpSessionEventHandlerInterface.h" />
-    <ClInclude Include="..\..\..\..\Asio\src\WaitTimer.h" />
-    <ClInclude Include="..\..\..\..\Asio\src\WaitTimerEventHandlerInterface.h" />
+    <ClInclude Include="..\..\..\..\Cinder-Asio\src\CinderAsio.h" />
+    <ClInclude Include="..\..\..\..\Cinder-Asio\src\ClientEventHandlerInterface.h" />
+    <ClInclude Include="..\..\..\..\Cinder-Asio\src\ClientInterface.h" />
+    <ClInclude Include="..\..\..\..\Cinder-Asio\src\DispatcherEventHandlerInterface.h" />
+    <ClInclude Include="..\..\..\..\Cinder-Asio\src\DispatcherInterface.h" />
+    <ClInclude Include="..\..\..\..\Cinder-Asio\src\ServerEventHandlerInterface.h" />
+    <ClInclude Include="..\..\..\..\Cinder-Asio\src\ServerInterface.h" />
+    <ClInclude Include="..\..\..\..\Cinder-Asio\src\SessionEventHandlerInterface.h" />
+    <ClInclude Include="..\..\..\..\Cinder-Asio\src\SessionInterface.h" />
+    <ClInclude Include="..\..\..\..\Cinder-Asio\src\TcpClient.h" />
+    <ClInclude Include="..\..\..\..\Cinder-Asio\src\TcpClientEventHandlerInterface.h" />
+    <ClInclude Include="..\..\..\..\Cinder-Asio\src\TcpServer.h" />
+    <ClInclude Include="..\..\..\..\Cinder-Asio\src\TcpServerEventHandlerInterface.h" />
+    <ClInclude Include="..\..\..\..\Cinder-Asio\src\TcpSession.h" />
+    <ClInclude Include="..\..\..\..\Cinder-Asio\src\TcpSessionEventHandlerInterface.h" />
+    <ClInclude Include="..\..\..\..\Cinder-Asio\src\UdpClient.h" />
+    <ClInclude Include="..\..\..\..\Cinder-Asio\src\UdpClientEventHandlerInterface.h" />
+    <ClInclude Include="..\..\..\..\Cinder-Asio\src\UdpServer.h" />
+    <ClInclude Include="..\..\..\..\Cinder-Asio\src\UdpServerEventHandlerInterface.h" />
+    <ClInclude Include="..\..\..\..\Cinder-Asio\src\UdpSession.h" />
+    <ClInclude Include="..\..\..\..\Cinder-Asio\src\UdpSessionEventHandlerInterface.h" />
+    <ClInclude Include="..\..\..\..\Cinder-Asio\src\WaitTimer.h" />
+    <ClInclude Include="..\..\..\..\Cinder-Asio\src\WaitTimerEventHandlerInterface.h" />
     <ClInclude Include="..\..\..\src\OpcClient.h" />
     <ClInclude Include="..\..\..\src\OpcConstants.h" />
     <ClInclude Include="..\..\..\src\OpcServer.h" />
