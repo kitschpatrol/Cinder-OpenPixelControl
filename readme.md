@@ -1,6 +1,6 @@
 # Cinder-OpenPixelControl
 
-**A [Cinder](https://libcinder.org) block providing a basic implementation of the [OpenPixelControl](http://openpixelcontrol.org) protocol for controlling large numbers of LEDs in real-time over TCP/IP. Networking provided by the [Cinder-Asio block](https://github.com/BanTheRewind/Cinder-Asio).**
+**A [Cinder](https://libcinder.org) block providing a basic implementation of the [OpenPixelControl](https://web.archive.org/web/20260704010252/http://openpixelcontrol.org/) protocol for controlling large numbers of LEDs in real-time over TCP/IP. Networking provided by the [Cinder-Asio block](https://github.com/BanTheRewind/Cinder-Asio).**
 
 ## Getting Started
 
@@ -16,7 +16,7 @@ This implementation is certainly not the leanest out there, but it tries to leve
 
 ## Origin
 
-The [OpenPixelControl](http://openpixelcontrol.org) spec and reference implementation was created by [Ka-Ping Yee](https://github.com/zestyping).
+The [OpenPixelControl](https://web.archive.org/web/20260704010252/http://openpixelcontrol.org/) spec and reference implementation was created by [Ka-Ping Yee](https://github.com/zestyping).
 
 [Micah Elizabeth Scott](https://scanlime.org/) has done a ton of significant work on top of the OPC protocol for her [Fadecandy](https://github.com/kitschpatrol/fadecandy) project, including hardware controllers and OPC wrapper libraries for a number of frameworks and platforms.
 

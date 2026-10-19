@@ -19,6 +19,7 @@ env:
   LYCHEE_ARGS: >-
     -vv
     --no-progress
+    --exclude-loopback
     --require-https
     --include-fragments
     --cache
@@ -49,6 +50,7 @@ jobs:
         uses: lycheeverse/lychee-action@e7477775783ea5526144ba13e8db5eec57747ce8 # v2.9.0
         with:
           args: ${{ env.LYCHEE_ARGS }} '**/*.md'
+          failIfEmpty: 'false'
           token: ${{ secrets.PERSONAL_ACCESS_TOKEN || secrets.GITHUB_TOKEN }}
 
       - name: Save lychee cache
@@ -107,10 +109,10 @@ jobs:
         env:
           HOMEPAGE: ${{ steps.homepage.outputs.url }}
         run: |
-          sitemap_url="$(
+          sitemap_url="$({
             curl --fail --silent --show-error --location "$HOMEPAGE" |
               htmlq --base "$HOMEPAGE" --attribute href 'link[rel~="sitemap"]'
-          )" 2> "$RUNNER_TEMP/htmlq.log" || true
+          } 2> "$RUNNER_TEMP/htmlq.log")" || true
           sitemap_url="${sitemap_url:-$HOMEPAGE}"
 
           pipx run --spec 'trafilatura==2.1.0' trafilatura --sitemap "$sitemap_url" --list \
@@ -132,6 +134,7 @@ jobs:
         uses: lycheeverse/lychee-action@e7477775783ea5526144ba13e8db5eec57747ce8 # v2.9.0
         with:
           args: ${{ env.LYCHEE_ARGS }} --files-from ${{ runner.temp }}/urls.txt
+          failIfEmpty: 'false'
           token: ${{ secrets.PERSONAL_ACCESS_TOKEN || secrets.GITHUB_TOKEN }}
 
       - name: Save lychee cache
