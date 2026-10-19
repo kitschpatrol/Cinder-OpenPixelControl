@@ -1,5 +1,5 @@
 //
-//  OPCServer.hpp
+//  OpcServer.h
 //  CinderOpenPixelControlSandbox
 //
 //  Created by Eric Mika on 12/23/15.

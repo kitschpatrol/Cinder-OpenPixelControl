@@ -1,5 +1,5 @@
 //
-//  Opc.h
+//  OpcConstants.h
 //  CinderOpenPixelControlSandbox
 //
 //  Created by Eric Mika on 12/24/15.

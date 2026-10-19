@@ -29,7 +29,7 @@ void OpcBasicClientApp::prepareSettings(Settings *settings) {
 
 void OpcBasicClientApp::setup() {
 	// Create OPC client, providing the IP and port for OPC server.
-	// Node additional (defaulted) arguments in create function.
+	// Note additional (defaulted) arguments in create function.
 	mOpcClient = kp::opc::Client::create("127.0.0.1", 7890);
 }
 
@@ -39,7 +39,7 @@ void OpcBasicClientApp::update() {
 	// Pulse a rainbow through the LEDs...
 	for (int i = 0; i < numLeds; i++) {
 		// Set the color of an LED at a particular index
-		// Note that nothing's actually sent to the server till mOpcClient-->update() is called.
+		// Note that nothing's actually sent to the server till mOpcClient->update() is called.
 		mOpcClient->setLED(i, ci::Color(CM_HSV, fmod((i + getElapsedSeconds() * 20.0) / (float)numLeds, 1.0), 1.0, 1.0));
 	}
 

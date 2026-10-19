@@ -1,4 +1,4 @@
-// OPCServer.cpp
+// OpcServer.cpp
 // CinderOpenPixelControlSandbox
 //
 // Created by Eric Mika on 12/23/15.
@@ -22,7 +22,7 @@ ServerRef Server::create(int numLeds, int32_t port, ColorOrder colorOrder) {
 }
 
 Server::Server(int numLeds, int32_t port, ColorOrder colorOrder) {
-	CI_LOG_V("Client Created");
+	CI_LOG_V("OpcServer Created");
 	mNumLeds = numLeds;
 	mPort = port;
 	mColorOrder = colorOrder;
@@ -43,7 +43,7 @@ Server::Server(int numLeds, int32_t port, ColorOrder colorOrder) {
 }
 
 Server::~Server() {
-	CI_LOG_V("Client Destroyed");
+	CI_LOG_V("OpcServer Destroyed");
 
 	// clean up queue
 	mBufferQueue.clear();
@@ -84,7 +84,7 @@ void Server::onAccept(TcpSessionRef session) {
 }
 
 void Server::onRead(ci::BufferRef buffer) {
-	// See http://openpixelcontrol.org for spec.
+	// See https://web.archive.org/web/20260704010252/http://openpixelcontrol.org/ for spec.
 	// Note that support for multiple channels is not implemented.
 
 	// Enqueue received message
@@ -124,7 +124,7 @@ bool Server::parseQueue(std::deque<uint8_t> &queue) {
 	}
 
 	if (numLedsReceived > mNumLeds) {
-		CI_LOG_W("Received data for " << numLedsReceived << " but server only set up to represent " << mNumLeds << " leds.");
+		CI_LOG_W("Received data for " << numLedsReceived << " LEDs but server only set up to represent " << mNumLeds << " LEDs.");
 		// We just discard any extras...
 	}
 
@@ -161,7 +161,7 @@ void Server::onReadComplete() {
 }
 
 void Server::onError(std::string err, size_t bytesTransferred) {
-	CI_LOG_V("Error" + (err.empty() ? "" : (": " + err)););
+	CI_LOG_V("Error" + (err.empty() ? "" : (": " + err)));
 }
 
 void Server::onClose() {

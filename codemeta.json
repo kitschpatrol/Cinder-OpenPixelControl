@@ -1,0 +1,51 @@
+{
+  "@context": "https://w3id.org/codemeta/3.1",
+  "@type": "SoftwareSourceCode",
+  "name": "Cinder-OpenPixelControl",
+  "identifier": "com.kitschpatrol.openpixelcontrol",
+  "version": "1.0.0",
+  "description": "CinderBlock for OpenPixelControl, with a basic client and server implementing (most of) the protocol for controlling large numbers of LEDs in real time over TCP/IP.",
+  "author": {
+    "@type": "Person",
+    "email": "eric@ericmika.com",
+    "name": "Eric Mika",
+    "url": "https://ericmika.com"
+  },
+  "keywords": [
+    "cinder",
+    "cinderblock",
+    "openpixelcontrol",
+    "led",
+    "tcp",
+    "asio"
+  ],
+  "programmingLanguage": "C++",
+  "operatingSystem": [
+    "macOS",
+    "Windows"
+  ],
+  "url": "https://github.com/kitschpatrol/Cinder-OpenPixelControl",
+  "codeRepository": "https://github.com/kitschpatrol/Cinder-OpenPixelControl.git",
+  "issueTracker": "https://github.com/kitschpatrol/Cinder-OpenPixelControl/issues",
+  "license": "https://spdx.org/licenses/MIT",
+  "dateCreated": "2015-12-29",
+  "softwareRequirements": [
+    {
+      "@type": "SoftwareSourceCode",
+      "name": "Cinder",
+      "codeRepository": "https://github.com/cinder/Cinder.git",
+      "version": "0.9.1dev"
+    },
+    {
+      "@type": "SoftwareSourceCode",
+      "name": "OpenPixelControl",
+      "codeRepository": "https://github.com/zestyping/openpixelcontrol.git"
+    },
+    {
+      "@type": "SoftwareSourceCode",
+      "name": "Cinder-Asio",
+      "identifier": "asio.bantherewind.com",
+      "codeRepository": "https://github.com/BanTheRewind/Cinder-Asio.git"
+    }
+  ]
+}

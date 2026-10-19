@@ -1,26 +1,25 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <cinder>
 	<block
-	name="OpenPixelControl"
-	id="com.kitschpatrol.openpixelcontrol"
-	git="https://github.com/kitschpatrol/Cinder-OpenPixelControl.git"
-	url="https://github.com/kitschpatrol/Cinder-OpenPixelControl"
-	author="Eric Mika"
-	summary="Basic client and server implementing (most of) the OpenPixelControl protocol on top of Boost.Asio."
-	version="1.0.0"
-	library="http://openpixelcontrol.org"
-	license="MIT"
+		name="OpenPixelControl"
+		id="com.kitschpatrol.openpixelcontrol"
+		git="https://github.com/kitschpatrol/Cinder-OpenPixelControl.git"
+		url="https://github.com/kitschpatrol/Cinder-OpenPixelControl"
+		author="Eric Mika"
+		summary="CinderBlock for OpenPixelControl, with a basic client and server implementing (most of) the protocol for controlling large numbers of LEDs in real time over TCP/IP."
+		version="1.0.0"
+		library="https://github.com/zestyping/openpixelcontrol"
+		license="MIT"
 	>
 		<requires>asio.bantherewind.com</requires>
 		<supports os="macosx" />
-		<supports os="msw" />	
-	
+		<supports os="msw" />
+
 		<headerPattern>src/*.h</headerPattern>
 		<sourcePattern>src/*.cpp</sourcePattern>
-		
+
 		<platform os="msw">
 			<includePath>src</includePath>
 		</platform>
-		
 	</block>
 </cinder>
